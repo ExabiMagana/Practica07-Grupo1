@@ -81,6 +81,34 @@
 
     <div class="seccion">
         <!-- Gustavo -->
+             <form onsubmit="mostrarEquipo(event)">
+    <div class="mb-3">
+        <label for="equipoFavorito" class="form-label">
+            ¿Cuál es tu equipo de fútbol favorito?
+        </label>
+
+        <select class="form-select" id="equipoFavorito" required>
+            <option value="" selected disabled>Selecciona un equipo</option>
+            <option value="FC Barcelona">FC Barcelona</option>
+            <option value="Real Madrid">Real Madrid</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Enviar
+    </button>
+</form>
+
+<script>
+    function mostrarEquipo(event) {
+        event.preventDefault();
+
+        let equipo = document.getElementById("equipoFavorito").value;
+
+        alert("Tu equipo favorito es: " + equipo);
+    }
+</script>
+
     </div>
 
   </div>
